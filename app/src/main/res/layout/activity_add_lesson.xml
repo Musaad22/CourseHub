@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- AppBarLayout مع Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <!-- عنوان في المنتصف -->
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="إضافة درس"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- باقي العناصر -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- إدخال عنوان الدرس -->
+        <EditText
+            android:id="@+id/etTitleLesson"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:paddingStart="10dp"
+            android:hint="عنوان الدرس"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_tex"
+            android:inputType="text"/>
+
+        <!-- إدخال وصف الدرس -->
+        <EditText
+            android:id="@+id/etDescriptionLesson"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="10dp"
+            android:hint="وصف الدرس"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_tex"
+            android:gravity="top"
+            android:inputType="textMultiLine"/>
+
+        <!-- إدخال رابط اليوتيوب -->
+        <EditText
+            android:id="@+id/etLessonLink"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:paddingStart="10dp"
+            android:hint="رابط يوتيوب"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:background="@drawable/edit_tex"
+            android:inputType="textUri"/>
+
+        <!-- زر الإضافة -->
+        <Button
+            android:id="@+id/btnAddLesson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="إضافة الدرس"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

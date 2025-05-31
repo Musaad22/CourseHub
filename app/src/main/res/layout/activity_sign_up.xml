@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.sign_up.SignUpActivity">
+
+    <ImageView
+        android:id="@+id/backTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/icon_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivUserImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="32dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/app_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpTV" />
+
+    <TextView
+        android:id="@+id/signUpTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+
+        android:text="@string/sign_up"
+        android:textColor="#000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backTv" />
+
+    <EditText
+        android:id="@+id/fullNameET"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_tex"
+        android:drawableStart="@drawable/icon_person_24"
+        android:drawablePadding="15dp"
+        android:hint="@string/fullname"
+        android:inputType="text"
+        android:paddingHorizontal="15dp"
+        android:textColor="@android:color/black"
+
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivUserImage" />
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/edit_tex"
+        android:drawableStart="@drawable/icon_email_24"
+        android:drawablePadding="15dp"
+        android:hint="@string/abc_hotmail_com"
+        android:inputType="text"
+        android:paddingHorizontal="15dp"
+        android:textColor="@android:color/black"
+
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fullNameET"
+        tools:ignore="TextFields" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout9"
+        style="@style/TextInputLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="21dp"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailET">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/icon_lock_24"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/passwordEt"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="56dp"-->
+    <!--        android:layout_marginHorizontal="30dp"-->
+    <!--        android:layout_marginTop="21dp"-->
+    <!--        android:background="@drawable/edit_tex"-->
+    <!--        android:drawableStart="@drawable/icon_lock_24"-->
+    <!--        android:drawablePadding="15dp"-->
+    <!--        android:hint="@string/your_password"-->
+    <!--        android:textColor="@android:color/black"-->
+    <!--        android:textSize="16sp"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        android:paddingHorizontal="15dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/emailET" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/hideConfirmPassword"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="15dp"-->
+    <!--        android:src="@drawable/icon_baseline_visibility_off_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/passwordEt"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/passwordEt"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/passwordEt" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/confirmPasswordEt"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="56dp"-->
+    <!--        android:layout_marginHorizontal="30dp"-->
+    <!--        android:layout_marginTop="21dp"-->
+    <!--        android:background="@drawable/edit_tex"-->
+    <!--        android:drawableStart="@drawable/icon_lock_24"-->
+    <!--        android:drawablePadding="15dp"-->
+    <!--        android:hint="@string/confirmPassword"-->
+    <!--        android:textColor="@android:color/black"-->
+    <!--        android:textSize="16sp"-->
+
+    <!--        android:inputType="textPassword"-->
+    <!--        android:paddingHorizontal="15dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/passwordEt" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/confirmPassword"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="15dp"-->
+    <!--        android:src="@drawable/icon_baseline_visibility_off_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/confirmPasswordEt"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/confirmPasswordEt"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/confirmPasswordEt" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout"
+        style="@style/TextInputLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="21dp"
+        android:hint="confirmPassword"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextInputLayout9">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmPasswordEt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:drawableStart="@drawable/icon_lock_24"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textSize="15sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/signupBt"
+        android:layout_width="270dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="36dp"
+        android:drawableEnd="@drawable/icon_arrow_forward_24"
+        android:text="@string/sign_up"
+        android:textAllCaps="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/TextInputLayout" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        >
+
+        <TextView
+            android:id="@+id/alreadyHaveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/siginTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@string/signIn"
+            android:textColor="#3056F0"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.course_details.CourseDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:importantForAccessibility="no"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/course_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvCourseTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="مقدمة إلى البرمجة"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvTeacherName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:text="د. محمد أحمد"
+                    android:textSize="20sp"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCoursePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="end"
+                    android:paddingBottom="8dp"
+                    android:text="200$"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvStudentCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="30 طالب"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+
+                <TextView
+                    android:id="@+id/tvHours"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:text="40 ساعة"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="هذا الكورس يقدم مقدمة شاملة للبرمجة الأساسية.\n
+المواضيع تشمل:\n
+- مفاهيم البرمجة مثل التجارة والحلقات والشروط الأساسية.\n
+- هيكلة للكود.\n
+- البرمجة الجديدة (OOP) مصممة للكائنات الفضائية.\n
+- التعامل مع الملفات وإدارة البيانات.\n
+- أساسيات قواعد البيانات وربطها بالتطبيقات.\n
+- مشروع لتطبيق ما تعلمه.\n
+"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrationInCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:paddingVertical="15dp"
+            android:text="Add Course"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+</FrameLayout>
