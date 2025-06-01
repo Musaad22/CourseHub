@@ -72,6 +72,8 @@ public class SignInActivity extends AppCompatActivity {
         return email.equals("admin@gmail.com") && password.equals("admin");
     }
 
+    // admin
+
     private void startAdminHomeActivity() {
         Intent intent = new Intent(SignInActivity.this, AdminHomeActivity.class);
         startActivity(intent);
